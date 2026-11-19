@@ -1,9 +1,36 @@
 .App {
   text-align: center;
+  display: grid;
+
+  grid-template-areas:
+    "h h"
+    "n c";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; */
+}
+
+.header {
+  grid-area: h;
+  background-color: greenyellow;
+}
+
+.nav {
+  grid-area: n;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #e4a5cd;
+}
+
+.header img {
+  width: 20px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -21,7 +48,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(171, 123, 123);
 }
 
 .App-link {
@@ -32,6 +59,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
